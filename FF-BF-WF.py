@@ -16,7 +16,6 @@ def bf(pa, po):
                     swap = pa_aux[indice_esp]
                 else:
                     swap = ""
-                print(swap)
                 pa_aux[indice_esp] = (swap+"\nNo do processo: "+str(indice_p)+
                             "\nTamanho do processo: "+str(processo)+
                             "\nNo partição: "+str(indice_esp)+
@@ -52,7 +51,6 @@ def ff(pa, po):
                     swap = pa_aux[indice_esp]
                 else:
                     swap = ""
-                print(swap)
                 pa_aux[indice_esp] = (swap+"\nNo do processo: "+str(indice_p)+
                             "\nTamanho do processo: "+str(processo)+
                             "\nNo partição: "+str(indice_esp)+
@@ -90,7 +88,6 @@ def wf(pa, po):
                     swap = pa_aux[indice_esp]
                 else:
                     swap = ""
-                print(swap)
                 pa_aux[indice_esp] = (swap+"\nNo do processo: "+str(indice_p)+
                             "\nTamanho do processo: "+str(processo)+
                             "\nNo partição: "+str(indice_esp)+
