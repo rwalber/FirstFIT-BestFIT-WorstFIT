@@ -2,7 +2,7 @@
 
 def bf(pa, po):
     po_aux = []
-    pa_aux = pa.copy()
+    pa_aux = []
     pa_aux2 = pa.copy()
     for processo in po:
         pa_atualizada = pa_aux2.copy()
@@ -13,22 +13,22 @@ def bf(pa, po):
                 indice_esp = pa.index(espaco)
                 indice_esp2 = pa_aux2.index(espaco)
                 novo_espaco = espaco - processo
-                pa_aux[indice_esp] = ("No do processo: "+str(indice_p)+
-                            "\nTamanho do processo: "+str(processo)+
-                            "\nNo partição: "+str(indice_esp)+
-                            "\nTamanho da partição: "+str(espaco)+
-                            "\nSobra: "+str(novo_espaco))
+                pa_aux.append((str(indice_p)+
+                            "\t"+str(processo)+
+                            "\t"+str(indice_esp)+
+                            "\t"+str(espaco)+
+                            "\t"+str(novo_espaco)))
                 po_aux.append(po[indice_p])
                 del(pa_aux2[indice_esp2])
                 break
             else:
                 continue
-    
+
+    print("No. do processo | Tamanho do processo | No partição | Tamanho da partição | Sobra")
     for espaco in pa_aux:
-        print("--------------------")
         print(espaco)
 
-    print("\nProcessos em espera:")
+    print("Processos em espera:")
     espera = list(set(po) - set(po_aux))
     for processo in espera:
         indice_p = po.index(processo)
@@ -37,7 +37,7 @@ def bf(pa, po):
 
 def ff(pa, po):
     po_aux = []
-    pa_aux = pa.copy()
+    pa_aux = []
     pa_aux2 = pa.copy()
     for processo in po:
         indice_p = po.index(processo)
@@ -47,23 +47,22 @@ def ff(pa, po):
                 indice_esp = pa.index(espaco)
                 indice_esp2 = pa_aux2.index(espaco)
                 novo_espaco = espaco - processo
-                pa[indice_esp] = novo_espaco
-                pa_aux[indice_esp] = ("No do processo: "+str(indice_p)+
-                            "\nTamanho do processo: "+str(processo)+
-                            "\nNo partição: "+str(indice_esp)+
-                            "\nTamanho da partição: "+str(espaco)+
-                            "\nSobra: "+str(novo_espaco))
+                pa_aux.append((str(indice_p)+
+                            "\t"+str(processo)+
+                            "\t"+str(indice_esp)+
+                            "\t"+str(espaco)+
+                            "\t"+str(novo_espaco)))
                 po_aux.append(po[indice_p])
                 del(pa_aux2[indice_esp2])
                 break
             else:
                 continue
     
+    print("No. do processo | Tamanho do processo | No partição | Tamanho da partição | Sobra")
     for espaco in pa_aux:
-        print("--------------------")
         print(espaco)
 
-    print("\nProcessos em espera:")
+    print("Processos em espera:")
     espera = list(set(po) - set(po_aux))
     for processo in espera:
         indice_p = po.index(processo)
@@ -72,7 +71,7 @@ def ff(pa, po):
 
 def wf(pa, po):
     po_aux = []
-    pa_aux = pa.copy()
+    pa_aux = []
     pa_aux2 = pa.copy()
     for processo in po:
         pa_atualizada = pa_aux2.copy()
@@ -83,22 +82,22 @@ def wf(pa, po):
                 indice_esp = pa.index(espaco)
                 indice_esp2 = pa_aux2.index(espaco)
                 novo_espaco = espaco - processo
-                pa_aux[indice_esp] = ("No do processo: "+str(indice_p)+
-                            "\nTamanho do processo: "+str(processo)+
-                            "\nNo partição: "+str(indice_esp)+
-                            "\nTamanho da partição: "+str(espaco)+
-                            "\nSobra: "+str(novo_espaco))
+                pa_aux.append((str(indice_p)+
+                            "\t"+str(processo)+
+                            "\t"+str(indice_esp)+
+                            "\t"+str(espaco)+
+                            "\t"+str(novo_espaco)))
                 po_aux.append(po[indice_p])
                 del(pa_aux2[indice_esp2])
                 break
             else:
                 continue
     
+    print("No. do processo | Tamanho do processo | No partição | Tamanho da partição | Sobra")
     for espaco in pa_aux:
-        print("--------------------")
         print(espaco)
 
-    print("\nProcessos em espera:")
+    print("Processos em espera:")
     espera = list(set(po) - set(po_aux))
     for processo in espera:
         indice_p = po.index(processo)
